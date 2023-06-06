@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD_product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JS/type.js"></script>
+    <script src="JS/commodity_page.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <!--頁首-->
+    <header>
+        <script>
+            head();
+        </script>
+    </header>
+    <div class="clear"></div>
+    <script src="JS/common.js"></script>
+    <!--內容-->
+    <main>
+        <!--商品圖與介紹-->
+        <section class="box two_item">
+            <div class="pro_photo">
+                <img id="commodity_img" src=""></img>
+            </div>
+            <div></div><!--留空-->
+            <div class="pro_introduce">
+                <h2>
+                    <p id="commodity_name"></p>
+                    <p id="commodity_price"></p>
+                </h2>
+                <div id="commodity_info">
+                    <!--詳細資訊內容-->
+                </div>
+                <button>加入購物車</button>
+            </div>
+        </section>
+
+        <!--商品介紹-->
+        <section class="box narrow">
+            <div>
+                <div class="underline">商品介紹</div>
+                <div id="commodity_intr">
+                    <!--商品介紹內容-->
+                </div>
+            </div>
+        </section>
+
+        <!--評價-->
+        <section class="box narrow">
+            <div>
+                <div class="underline">評價</div>
+                <div class="form_context">
+                    <!--評價內容-->
+                    <div>
+                        <div class="context">
+                            <div>
+                                <div class="form_text">姓名：</div><input type="text" name="username" size="25"/>
+                                <br>
+                                <div class="form_text">評價：</div>
+                                <div class="rating-box">
+                                    <div class="rating">
+                                    <span class="fa fa-star-o" style="color:#e3c85a"></span>
+                                    <span class="fa fa-star-o" style="color:#e3c85a"></span>
+                                    <span class="fa fa-star-o" style="color:#e3c85a"></span>
+                                    <span class="fa fa-star-o" style="color:#e3c85a"></span>
+                                    <span class="fa fa-star-o" style="color:#e3c85a"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <textarea name="memo" cols="100" rows="10" wrap="hard" class="area" placeholder="請寫下您的評論！"></textarea>
+                            </div>
+                        </div>
+                        <button>送出</button>
+                    </div>
+                    <div></div>
+                    <div>
+                        <div class="commodity_context">
+                            <img src="image/icon/vip.png">
+                            <div>好吃到滿出來，全家都喜歡，推！</div>
+                        </div>
+                        <div class="commodity_context">
+                            <img src="image/icon/vip.png">
+                            <div>吃起來的味道，跟去日本買的一樣耶。</div>
+                        </div>
+                        <div class="commodity_context">
+                            <img src="image/icon/vip.png">
+                            <div>特別的日式和果子伴手禮店！包裝與口味很有日本味～推薦送禮佳節一定要購買！</div>
+                        </div>
+                        <div class="commodity_context">
+                            <img src="image/icon/vip.png">
+                            <div>這個東西，非常經典，好吃！</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!--頁尾-->
+    <footer>
+        <script>
+            foot();
+        </script>
+    </footer>
+
+    <!--回到頂部-->
+    <div class="gotop">
+        <a href="#">TOP</a>
+    </div>
+
+    <script>
+        const stars=document.querySelector(".rating").children;
+        let ratingValue
+        let index //目前選到的星星
+        //document.getElementById("rating-value").innerHTML = "請給分"
+        for(let i=0;i<stars.length;i++){
+        stars[i].addEventListener("mouseover",function(){
+        //  console.log(i)
+        //document.getElementById("rating-value").innerHTML = "正在打分數"
+        for(let j=0;j<stars.length;j++){
+        stars[j].classList.remove("fa-star")//reset 所有星星
+        stars[j].classList.add("fa-star-o")
+        }
+        for(let j=0;j<=i;j++){
+        stars[j].classList.remove("fa-star-o") //先移除空心的星星
+        stars[j].classList.add("fa-star") //添加新的星星 如果i=j表示選中的
+        }
+        })
+        stars[i].addEventListener("click",function(){
+        ratingValue=i+1
+        index=i
+        //document.getElementById("rating-value").innerHTML = "你打的分數是 "+ratingValue
+        })
+        stars[i].addEventListener("mouseout",function(){
+        for(let j=0;j<stars.length;j++){
+        stars[j].classList.remove("fa-star")//reset 所有星星
+        stars[j].classList.add("fa-star-o")
+        }
+        for(let j=0;j<=index;j++){
+        stars[j].classList.remove("fa-star-o")
+        stars[j].classList.add("fa-star")
+        }
+        })
+        }
+
+    </script>
+</body>
+</html>

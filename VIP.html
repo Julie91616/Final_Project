@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/VIP.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD.css">
+    <script src="JS/type.js"></script>
+    
+</head>
+<body>
+    <!--頁首-->
+    <header>
+        <script>
+            head();
+        </script>
+    </header>
+    <div class="clear"></div>
+    <script src="JS/common.js"></script>
+
+    <!--內容-->
+    
+    <main>
+        <div id='left'>
+            <ul>
+                <li onclick="vip_info()">我的資料</li>
+                <li onclick="vip_hist()">消費紀錄</li>
+                <li onclick="vip_comm()">評論紀錄</li>
+            </ul>
+        </div>
+        <aside>
+            <!--我的資料-->
+            <div id="info" class="vip_card">
+                <form action="" method="post" style="margin-left: 20px;">
+                    <h3>我的資料</h3>
+                    <a>姓名： <input type="text" name="name" size="20" placeholder="Anna Wang"></a><br>
+                    <a>
+                        性別：
+                        <select name="sex" size="1">
+                            <option value="女性">女性</option>
+                            <option value="男性">男性</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </a><br>
+                    <a>生日： <input type="date" name="birthday" /></a><br>
+                    <a>電話： <input type="text" name="phone" size="20" placeholder="0912345678"></a><br>
+                    <a>電子郵件： <input type="text" name="email" size="20" placeholder="anna654321@gmail.com"></a><br>
+                    <a>地址： <input type="text" name="address" size="20" placeholder="320桃園市中壢區中北路200號"></a><br>
+                    <button type="reset" value="重新填寫" style="margin-top: 10px; margin-bottom: 10px;">重新填寫</button>
+                    <button type="submit" value="確認資料" style="margin-top: 10px; margin-bottom: 10px;">確認資料</button>
+                </form>
+            </div>
+
+            <!--消費紀錄-->
+            <div id="history" class="vip_card">
+                <h3 style="margin-left: 20px;">消費紀錄</h3>
+                <div>
+                    <br>
+                    <p>
+                        紅豆鹿子 &emsp; 1 x NT$480 &emsp; 2023/06/01 <br>
+                        栗子饅頭 &emsp; 2 x NT$540 &emsp; 2023/06/01 <br>
+                        日本禮盒 &emsp; 1 x NT$1325 &emsp; 2023/03/24 <br>
+                        黑芝麻酥 &emsp; 5 x NT$660 &emsp; 2023/03/24 <br>
+                        春節禮盒 &emsp; 3 x NT$1265 &emsp; 2023/01/10
+                    </p>
+                </div>
+            </div>
+
+            <!--評論紀錄-->
+            <div id="comment" class="vip_card">
+                <h3 style="margin-left: 20px;">評論紀錄</h3>
+                <div>
+                    <br>
+                    <p>
+                        2023/06/07 &emsp; 好吃到滿出來，全家都喜歡，推！<br>
+                        2023/06/07 &emsp; 吃起來的味道，跟去日本買的一樣耶。<br>
+                        2023/04/06 &emsp; 這個東西，非常經典，好吃！<br>
+                        2023/01/25 &emsp; 特別的日式和果子伴手禮店！包裝與口味很有日本味～推薦送禮佳節一定要購買！
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <script src="JS/VIP.js"></script>
+    </main>
+    
+    <!--頁尾-->
+    <footer>
+        <script>
+            foot();
+        </script>
+    </footer>
+
+    <!--回到頂部-->
+    <div class="gotop">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>

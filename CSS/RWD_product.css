@@ -1,0 +1,17 @@
+@media screen and (max-width: 800px) {
+    .overview {
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+        margin: 0px auto;
+        padding: 80px 50px;
+    }
+
+    .two_item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .context {
+        grid-template-columns: 1fr;
+    }
+}

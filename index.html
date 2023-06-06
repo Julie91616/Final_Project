@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--color:https://colorhunt.co/palette/3a98b9fff1dce8d5c4eeeeee -->
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD_index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD.css">
+    <script src="JS/type.js"></script>
+    
+</head>
+<body>
+    <!--頁首-->
+    <header>
+        <script>
+            head();
+        </script>
+    </header>
+    <div class="clear"></div>
+    <script src="JS/common.js"></script>
+    
+    <!--內容-->
+    <main>
+        <!--幻燈片-->
+        <section class="box">
+            <div class="slideshow">
+                <script>
+                    photo = [
+                        "image/slide/slide1.jpg",
+                        "image/slide/slide2.jpg",
+                        "image/slide/slide3.jpg",
+                        ];
+                    for(var i=0; i<photo.length; i++){
+                        document.write("<div class='slide__item fades'>");
+                        document.write("<img src='"+photo[i]+"' />");
+                        document.write("</div>");
+                    }
+                
+                    document.write("<div class='slide__dot'>");
+                    for(var i=0; i<photo.length; i++){
+                        document.write("<div class='dot' data-value="+i+"></div>")
+                    }
+                    document.write("</div>")
+                </script>
+                <a id="prev" class="slide__arraw slide__arraw--prev"> ❮ </a>
+                <a id="next" class="slide__arraw slide__arraw--next"> ❯ </a>
+            </div>
+            <script src="JS/index.js"></script>
+        </section>
+
+        <!--熱銷商品-->
+        <section class="box">
+            <div class="underline">熱銷商品</div>
+                <div class="hot_product">
+                    <script src="JS/product.js"></script>
+                    <script>
+                        var items = new Object();
+                        items = {
+                            "2": {
+                                a: "item.html"+"?id=0",
+                                photo: "image/1_namagashi/namagashi_tsubuan1.jpg",
+                                title: "紅豆鹿子",
+                                price: 480
+                            },
+                            "1": {
+                                a: "item.html"+"?id=3",
+                                photo: "image/2_manjyu/manjyu_kuri1.jpg",
+                                title: "栗子饅頭",
+                                price: 540
+                            },
+                            "3": {
+                                a: "item.html"+"?id=5",
+                                photo: "image/3_getsupei/getsupei_shiroan1.jpg",
+                                title: "白豆沙",
+                                price: 400
+                            },
+                            "0": {
+                                a: "item.html"+"?id=12",
+                                photo: "image/4_temiyage/temiyage3-1.jpg",
+                                title: "大吉大利日本禮盒",
+                                price: 1325
+                            },
+                        };
+                        pro_view(items);
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--頁尾-->
+    <footer>
+        <script>
+            foot();
+        </script>
+    </footer>
+
+    <!--回到頂部-->
+    <div class="gotop">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>

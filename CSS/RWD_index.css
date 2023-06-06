@@ -1,0 +1,8 @@
+@media screen and (max-width: 800px) {
+    .fades img {
+        height: 300px;
+    }
+    .hot_product {
+        grid-template-columns: 1fr;
+    }
+}

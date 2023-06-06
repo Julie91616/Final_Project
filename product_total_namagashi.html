@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品總覽—生菓子</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD_product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD.css">
+    <script src="JS/type.js"></script>
+    
+</head>
+<body>
+    <!--頁首-->
+    <header>
+        <script>
+            head();
+        </script>
+    </header>
+    <div class="clear"></div>
+    <script src="JS/common.js"></script>
+    <!--內容-->
+    <main>
+        <div class="title">生菓子</div>
+        <!--商品卡片-->
+        <section class="box overview">
+            <script src="JS/product.js"></script>
+            <script>
+                var items = new Object();
+                items = {
+                    "0": {
+                        a: "item.html"+"?id=0",
+                        photo: "image/1_namagashi/namagashi_tsubuan1.jpg",
+                        title: "紅豆鹿子",
+                        price: 480
+                    },
+                    "1": {
+                        a: "item.html"+"?id=1",
+                        photo: "image/1_namagashi/namagashi_hasunomi1.jpg",
+                        title: "蓮子鹿子",
+                        price: 480
+                    },
+                };
+                pro_view(items);
+            </script>
+        </section>
+       
+    </main>
+
+    <!--頁尾-->
+    <footer>
+        <script>
+            foot();
+        </script>
+    </footer>
+
+    <!--回到頂部-->
+    <div class="gotop">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>

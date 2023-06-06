@@ -1,0 +1,117 @@
+/* 商品頁的格式設定 */
+/* 如果內容不多，總覽頁面的設定也可以放這裡 */
+
+/*
+包含：
+    段落設定
+    圖片設定 -> 總覽圖、商品頁的獨照...
+    文字設定 -> 看有沒有要額外設定文字格式，不然直接使用common.css
+*/
+
+/* item的圖文並排 */
+.two_item {
+    grid-template-columns: 30% 5% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 90px;
+    grid-column-gap: 30px;
+    margin: 0px auto;
+    padding: 80px 50px;
+}
+.overview a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    text-align: center;
+}
+.card img {
+    width: 300px;
+}
+
+#commodity_img {
+    width: 100%;
+}
+#commodity_intr, #commodity_info, #commodity_context {
+    font-size: 20px;
+}
+ 
+button{
+    width:25%;
+    min-width: 100px;
+    display: inline-block; 
+    margin: 10px 10px; 
+    height: 35px; 
+    line-height:35px;
+    border:none; 
+    background:#d2b957; 
+    color:#fff; 
+    border-radius:20px;
+    margin-bottom: 20px;
+    outline: 0;
+    font-size: 14px;
+}
+
+.rating-box div{
+    font-size: 30px;
+}
+
+.form_text {
+    display: inline-block; 
+    font-size: 18px;
+}
+
+.context input{
+    width:60%;
+    min-width: 100px;
+    display: inline-block; 
+    margin: 10px 10px; 
+    height: 35px; 
+    font-size: 18px;
+    line-height:35px;
+    border:none; 
+    border-radius:10px;
+    margin-bottom: 20px;
+    outline: 0;
+    font-size: 14px;
+}
+
+.rating-box {
+    display: inline-block;
+}
+
+.context textarea{
+    min-height: 200px;
+    width: 500px;
+    display: inline-block;
+    border:none; 
+    border-radius:10px;
+    outline: 0;
+    font-size: 18px;
+}
+
+.form_context {
+    display: grid;
+    grid-template-columns: 1fr 2% 1fr;
+    justify-content: center;
+    padding: 10px;
+}
+
+.commodity_context {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #4e6e81;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-content: center;
+}
+.commodity_context img{
+    height: 60px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品總覽—漢餅</title>
+    <link rel="stylesheet" type="text/css" href="CSS/common.css">
+    <link rel="stylesheet" type="text/css" href="CSS/product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD_product.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RWD.css">
+    <script src="JS/type.js"></script>
+    
+</head>
+<body>
+    <!--頁首-->
+    <header>
+        <script>
+            head();
+        </script>
+    </header>
+    <div class="clear"></div>
+    <script src="JS/common.js"></script>
+    <!--內容-->
+    <main>
+        <div class="title">漢餅</div>
+        <!--商品卡片-->
+        <section class="box overview">
+            <script src="JS/product.js"></script>
+            <script>
+                var items = new Object();
+                items = {
+                    "5": {
+                        a: "item.html"+"?id=5",
+                        photo: "image/3_getsupei/getsupei_shiroan1.jpg",
+                        title: "白豆沙",
+                        price: 400
+                    },
+                    "6": {
+                        a: "item.html"+"?id=6",
+                        photo: "image/3_getsupei/getsupei_riyokutou1.jpg",
+                        title: "綠豆椪",
+                        price: 400
+                    },
+                    "7": {
+                        a: "item.html"+"?id=7",
+                        photo: "image/3_getsupei/getsupei_ranou1.jpg",
+                        title: "蛋黃酥",
+                        price: 560
+                    },
+                    "8": {
+                        a: "item.html"+"?id=8",
+                        photo: "image/3_getsupei/getsupei_pineapple1.jpg",
+                        title: "鳳梨酥",
+                        price: 550
+                    },
+                    "9": {
+                        a: "item.html"+"?id=9",
+                        photo: "image/3_getsupei/getsupei_kurogoma1.jpg",
+                        title: "黑芝麻酥",
+                        price: 660
+                    },
+                };
+                pro_view(items);
+            </script>
+        </section>
+    </main>
+
+    <!--頁尾-->
+    <footer>
+        <script>
+            foot();
+        </script>
+    </footer>
+
+    <!--回到頂部-->
+    <div class="gotop">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>

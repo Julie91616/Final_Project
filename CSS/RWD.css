@@ -1,0 +1,63 @@
+@media screen and (min-width: 1800px) {
+    body {
+        background-color: #fffde1;
+    }
+    main {
+        max-width: 1500px; 
+        /* 以我的螢幕來說是1440px，最大寬度要設多少 */
+        /* 芷綾：1520px */
+        /* 學校：1920px */
+        /* 可以在RWD中設定 */
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 30px;
+        padding: 30px;
+    }
+    .box {
+        display: grid;
+        padding: 20px 20px;
+    }
+    .narrow {
+        margin: 0px 25px;
+    }
+    #showmenu {
+        display: inline-block;
+        width: fit-content;
+    }
+    #vip, #shopping_list {
+        width: 350px;
+        margin-left: -175px; /* width/2 */
+    }
+
+    /* 選單 */
+    #drop-down {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+    }
+    ul.drop-down-menu {
+        width: 100%;
+        height: auto;
+        clear: both;
+    }
+    ul.drop-down-menu li {
+        float: none; 
+    }
+    ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+        background-color: #e3c85a;
+        color: #fff;
+    }
+    ul.drop-down-menu ul {
+        width: 100%;
+        top: 100%;
+    }
+    
+    ul.drop-down-menu ul li {
+        text-indent: 2em;
+    }
+}

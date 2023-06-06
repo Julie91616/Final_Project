@@ -1,0 +1,268 @@
+/* 所有頁面的通用內容 */
+/*
+包含：
+    頁首、頁尾、section容器
+    文字設定 -> 標題、內文...
+*/
+html {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    display: grid;
+    grid-template-rows: 60px 1fr 50px;
+    width: 100%;
+    min-height: 100%;
+    margin: 0px auto;
+    background-color: #fffde1;
+}
+.clear {
+    height: 60px;
+    background-color: #fffde1;
+}
+
+.underline {
+    font-size: 28px;
+    border-bottom: 1px black solid; 
+}
+
+/* 內容 */
+main {
+    width: 100%;
+    margin: 0px auto;
+    background-color: #fffde1;
+}
+.box {
+    display: grid;
+    padding: 20px 100px;
+}
+.title{
+    font-weight: bold;
+    font-size: 40px;
+    padding: 50px;
+    text-align: center;
+    color: #304b5b;
+}
+/* 較窄的內容 */
+.narrow {
+    margin: 0px 110px;
+}
+
+
+/* 頁首 */
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #4e6e81;
+    z-index: 100;
+}
+
+/* 頁尾 */
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #e3c85a;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    grid-row-start: 3;/*欄位從第二條橫線開始*/
+    grid-row-end: 4;
+}
+
+/* 回到頂部 */
+.gotop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #b32425;
+}
+.gotop a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* 選單 */
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.drop-down-menu {
+    border: 0px;
+    display: inline-block;
+    font-size: 19px;
+    margin: 0;
+}
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+    border-right: 0px;
+}
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+ ul.drop-down-menu a {
+    background-color: #4e6e81;
+    color: #f0f0f0;
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    line-height: 60px;
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: #e3c85a;
+    color: #fff;
+}
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: #e3c85a;
+    color: #fff;
+}
+ul.drop-down-menu ul {
+    border: #ccc 1px solid;
+    position: absolute;
+    z-index: 99;
+    left: 99999px;
+    top: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+ul.drop-down-menu ul li:last-child {
+    border-bottom: none;
+}
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    left: -1px;
+    border-right: 5px;
+}
+
+
+/* 圖示清單 */
+nav {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #4e6e81;
+    color: #f0f0f0;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
+}
+nav a {
+    padding-right: 15px;
+}
+.icon {
+    width: 40px;
+    margin: 10px 0px;
+}
+#showmenu {
+    display: none;
+    color: #f0f0f0;
+    text-decoration: none;
+    line-height: 60px;
+}
+#showmenu img {
+    height: 50px;
+    margin: 5px;
+}
+
+/* 會員 */
+#vip, #shopping_list {
+    position: fixed;
+    display: none;
+    top: 20%;
+    left: 50%;
+    margin-left: -300px; /* width/2 */
+    width: 600px;
+    z-index: 10;
+    text-align: center;
+    align-items: center;
+}
+#shop {
+    min-height: 300px;
+}
+#login_1, #login_2, #shop {
+    background: white;
+    border-radius: 20px;
+    width:100%;
+    height:100%; 
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login_1 h1, #login_2 h1{
+    margin: 20px auto;
+}
+#login_1 input, #login_2 input{
+    width:50%;
+    min-width: 250px;
+    display:block;
+    margin: 0px auto; 
+    height: 40px; 
+    line-height:40px;
+    border: none;
+    background-color: #eee;
+    padding: 0 20px;
+    border-radius: 20px;
+    outline: 0;
+    color: #000;
+    font-size: 14px;
+}
+#login_1 button, #login_2 button, #shop button{
+    width:25%;
+    min-width: 100px;
+    display: inline-block; 
+    margin:0 10px; 
+    height: 35px; 
+    line-height:35px;
+    border:none; 
+    background:#87a1af; 
+    color:#fff; 
+    border-radius:20px;
+    margin-bottom: 20px;
+    outline: 0;
+    font-size: 14px;
+}
+#shop button{
+    position: absolute;
+    bottom: 0px;
+}
+#login_1 button:hover, #login_2 button:hover, #shop button:hover{
+    background:#4e6e81; 
+}
+
+#login_2 {
+    display: none;
+}
+
+.btn_closeX {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+}

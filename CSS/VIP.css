@@ -1,0 +1,92 @@
+main {
+    padding: 50px 150px;
+    display: grid;
+    grid-template-columns: 15% 83%;
+}
+
+#left ul{
+    text-align: right;
+    font-size: 26px;
+}
+#left li {
+    height: 50px;
+    line-height: 50px;
+    background-color: #f1de90;
+    border: 1px solid;
+    padding-right: 5px;
+}
+#left li:hover {
+    background-color: #cfbb6b;
+}
+
+.vip_card {
+    display: block;
+    background-color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px 10px;
+    border: 1px solid;
+}
+.vip_card p {
+    margin-left: 40px;
+}
+.vip_card button {
+    width:10%;
+    min-width: 100px;
+    display: inline-block; 
+    margin:0 10px; 
+    height: 35px; 
+    line-height:35px;
+    border:none; 
+    background:#87a1af; 
+    color:#fff; 
+    border-radius:20px;
+    margin-bottom: 20px;
+    outline: 0;
+    font-size: 14px;
+}
+
+input, select {
+    width:60%;
+    min-width: 100px;
+    display: inline-block; 
+    margin: 10px 10px; 
+    height: 35px; 
+    font-size: 18px;
+    line-height:35px;
+    border:none; 
+    border-radius:10px;
+    margin-bottom: 20px;
+    outline: 0;
+    font-size: 14px;
+    background-color: #eee;
+}
+
+#history {
+    display: none;
+}
+
+#comment {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    main {
+        padding: 50px 0px;
+        grid-template-columns: 1fr;
+    }
+    #left ul{
+        text-align: center;
+        font-size: 20px;
+    }
+    #left li {
+        height: 30px;
+        line-height: 30px;
+    }
+    .vip_card, #left ul{
+        width: 90%;
+        margin: 0px auto;
+    }
+}
